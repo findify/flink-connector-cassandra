@@ -17,6 +17,7 @@
 
 package org.apache.flink.batch.connectors.cassandra;
 
+import com.google.common.util.concurrent.MoreExecutors;
 import org.apache.flink.api.common.io.RichOutputFormat;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.streaming.connectors.cassandra.ClusterBuilder;
@@ -111,7 +112,7 @@ public class CassandraPojoOutputFormat<OUT> extends RichOutputFormat<OUT> {
         }
 
         ListenableFuture<Void> result = mapper.saveAsync(record);
-        Futures.addCallback(result, callback);
+        Futures.addCallback(result, callback, MoreExecutors.directExecutor());
     }
 
     /**

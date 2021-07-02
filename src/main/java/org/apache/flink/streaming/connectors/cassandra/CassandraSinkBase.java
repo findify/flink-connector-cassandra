@@ -17,6 +17,7 @@
 
 package org.apache.flink.streaming.connectors.cassandra;
 
+import com.google.common.util.concurrent.MoreExecutors;
 import org.apache.flink.annotation.VisibleForTesting;
 import org.apache.flink.api.common.ExecutionConfig;
 import org.apache.flink.api.java.ClosureCleaner;
@@ -140,7 +141,7 @@ public abstract class CassandraSinkBase<IN, V> extends RichSinkFunction<IN>
             semaphore.release();
             throw e;
         }
-        Futures.addCallback(result, callback);
+        Futures.addCallback(result, callback, MoreExecutors.directExecutor());
     }
 
     protected Session createSession() {

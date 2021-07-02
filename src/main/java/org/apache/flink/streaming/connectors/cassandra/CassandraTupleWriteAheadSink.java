@@ -18,6 +18,7 @@
 
 package org.apache.flink.streaming.connectors.cassandra;
 
+import com.google.common.util.concurrent.MoreExecutors;
 import org.apache.flink.api.common.ExecutionConfig;
 import org.apache.flink.api.common.typeutils.TypeSerializer;
 import org.apache.flink.api.java.ClosureCleaner;
@@ -149,7 +150,7 @@ public class CassandraTupleWriteAheadSink<IN extends Tuple> extends GenericWrite
             updatesSent++;
             if (result != null) {
                 // add callback to detect errors
-                Futures.addCallback(result, callback);
+                Futures.addCallback(result, callback, MoreExecutors.directExecutor());
             }
         }
         updatesCount.set(updatesSent);

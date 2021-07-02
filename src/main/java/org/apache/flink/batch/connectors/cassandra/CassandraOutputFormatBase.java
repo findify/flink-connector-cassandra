@@ -17,6 +17,7 @@
 
 package org.apache.flink.batch.connectors.cassandra;
 
+import com.google.common.util.concurrent.MoreExecutors;
 import org.apache.flink.api.common.io.RichOutputFormat;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.streaming.connectors.cassandra.ClusterBuilder;
@@ -98,7 +99,7 @@ public abstract class CassandraOutputFormatBase<OUT> extends RichOutputFormat<OU
 
         Object[] fields = extractFields(record);
         ResultSetFuture result = session.executeAsync(prepared.bind(fields));
-        Futures.addCallback(result, callback);
+        Futures.addCallback(result, callback, MoreExecutors.directExecutor());
     }
 
     protected abstract Object[] extractFields(OUT record);
