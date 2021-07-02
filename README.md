@@ -1,5 +1,5 @@
 # Flink Cassandra connector unbundled
-[![CI Status](https://github.com/findify/flink-cassandra-connector/workflows/CI/badge.svg)](https://github.com/findify/flink-cassandra-connector/actions)
+[![CI Status](https://github.com/findify/flink-cassandra-connector/workflows/maven/badge.svg)](https://github.com/findify/flink-cassandra-connector/actions)
 [![License: Apache 2](https://img.shields.io/badge/License-Apache2-green.svg)](https://opensource.org/licenses/Apache-2.0)
 ![Last commit](https://img.shields.io/github/last-commit/findify/flink-cassandra-connector)
 ![Last release](https://img.shields.io/github/release/findify/flink-cassandra-connector)
