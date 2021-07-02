@@ -1,8 +1,8 @@
 # Flink Cassandra connector unbundled
-[![CI Status](https://github.com/findify/flink-cassandra-connector/workflows/maven/badge.svg)](https://github.com/findify/flink-cassandra-connector/actions)
+[![CI Status](https://github.com/findify/flink-connector-cassandra/workflows/maven/badge.svg)](https://github.com/findify/flink-connector-cassandra/actions)
 [![License: Apache 2](https://img.shields.io/badge/License-Apache2-green.svg)](https://opensource.org/licenses/Apache-2.0)
-![Last commit](https://img.shields.io/github/last-commit/findify/flink-cassandra-connector)
-![Last release](https://img.shields.io/github/release/findify/flink-cassandra-connector)
+![Last commit](https://img.shields.io/github/last-commit/findify/flink-connector-cassandra)
+![Last release](https://img.shields.io/github/release/findify/flink-connector-cassandra)
 
 This project is a forked version of an official Flink Cassandra connector, but
 with the following changes:
@@ -17,7 +17,7 @@ To install, use the following maven coordinates:
 ```xml
 <dependency>
   <groupId>io.findify</groupId>
-  <artifactId>flink-cassandra-connector_2.12</artifactId>
+  <artifactId>flink-connector-cassandra_2.12</artifactId>
   <version>1.13.1-1</version>
 </dependency>
 ```
