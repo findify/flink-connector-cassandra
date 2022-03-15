@@ -17,9 +17,9 @@
 
 package org.apache.flink.batch.connectors.cassandra;
 
-import com.google.common.util.concurrent.MoreExecutors;
 import org.apache.flink.api.common.io.RichOutputFormat;
 import org.apache.flink.configuration.Configuration;
+import org.apache.flink.shaded.guava30.com.google.common.util.concurrent.MoreExecutors;
 import org.apache.flink.streaming.connectors.cassandra.ClusterBuilder;
 import org.apache.flink.util.Preconditions;
 

@@ -27,7 +27,7 @@ under the License.
 	<artifactId>flink-connector-cassandra_2.12</artifactId>
 	<name>Flink : Connectors : Cassandra</name>
 	<description>A unbundled version of flink cassandra connector</description>
-	<version>1.13.1-1</version>
+	<version>1.14.4-1</version>
 	<packaging>jar</packaging>
 	<url>https://github.com/findify/flink-connector-cassandra</url>
 
@@ -53,14 +53,13 @@ under the License.
 	<properties>
 		<scala.binary.version>2.12</scala.binary.version>
 		<cassandra.version>3.11.10</cassandra.version>
-		<guava.version>27.0-jre</guava.version>
+		<guava.version>30.0-jre</guava.version>
 		<driver.version>3.10.2</driver.version>
 		<maven.compiler.source>8</maven.compiler.source>
 		<maven.compiler.target>8</maven.compiler.target>
-		<flink.version>1.13.1</flink.version>
+		<flink.version>1.14.4</flink.version>
 		<mockito.version>2.21.0</mockito.version>
 		<powermock.version>2.0.4</powermock.version>
-		<flink.version>1.13.1</flink.version>
 	</properties>
 
 	<build>
@@ -227,7 +226,7 @@ under the License.
 		<!-- A planner dependency won't be necessary once FLIP-32 has been completed. -->
 		<dependency>
 			<groupId>org.apache.flink</groupId>
-			<artifactId>flink-table-planner-blink_2.12</artifactId>
+			<artifactId>flink-table-planner_2.12</artifactId>
 			<version>${flink.version}</version>
 			<scope>provided</scope>
 			<optional>true</optional>
@@ -237,7 +236,7 @@ under the License.
 
 		<dependency>
 			<groupId>org.apache.flink</groupId>
-			<artifactId>flink-runtime_2.12</artifactId>
+			<artifactId>flink-runtime</artifactId>
 			<version>${flink.version}</version>
 			<scope>test</scope>
 			<type>test-jar</type>
@@ -318,6 +317,12 @@ under the License.
 					<artifactId>mockito-core</artifactId>
 				</exclusion>
 			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>cassandra</artifactId>
+			<version>1.16.3</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 

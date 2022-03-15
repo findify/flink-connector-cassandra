@@ -18,12 +18,12 @@
 
 package org.apache.flink.streaming.connectors.cassandra;
 
-import com.google.common.util.concurrent.MoreExecutors;
 import org.apache.flink.api.common.ExecutionConfig;
 import org.apache.flink.api.common.typeutils.TypeSerializer;
 import org.apache.flink.api.java.ClosureCleaner;
 import org.apache.flink.api.java.tuple.Tuple;
 import org.apache.flink.api.java.typeutils.runtime.TupleSerializer;
+import org.apache.flink.shaded.guava30.com.google.common.util.concurrent.MoreExecutors;
 import org.apache.flink.streaming.runtime.operators.CheckpointCommitter;
 import org.apache.flink.streaming.runtime.operators.GenericWriteAheadSink;
 

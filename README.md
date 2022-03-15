@@ -18,7 +18,7 @@ To install, use the following maven coordinates:
 <dependency>
   <groupId>io.findify</groupId>
   <artifactId>flink-connector-cassandra_2.12</artifactId>
-  <version>1.13.1-1</version>
+  <version>1.14.4-1</version>
 </dependency>
 ```
 
